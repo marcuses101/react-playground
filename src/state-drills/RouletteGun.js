@@ -22,9 +22,9 @@ export function RouletteGunFunction(props) {
     return () => clearTimeout(timeout);
   });
 
-  const message =
-    !chamber && !chamberSpinning ? (
-      <h3>Play Russian Roulette!</h3>
+  function selectMessage() {
+   return !chamber && !chamberSpinning ? (
+      ""
     ) : chamberSpinning ? (
       <p>spinning the chamber and pulling the trigger!...</p>
     ) : chamber === bulletInChamber ? (
@@ -32,10 +32,13 @@ export function RouletteGunFunction(props) {
     ) : (
       <p>You're safe</p>
     );
+  }
+
 
   return (
     <div>
-      {message}
+      <h1>Play Russian Roulette!</h1>
+      {selectMessage()}
       <button onClick={handleClick}>Pull the Trigger!</button>
     </div>
   );
@@ -67,3 +70,4 @@ export class RouletteGunClass extends React.Component {
     );
   }
 }
+

@@ -1,0 +1,16 @@
+.Accordion {
+  padding: 0;
+}
+
+.Accordion li {
+  list-style-type: none;
+  margin: 10px;
+  transition-duration: 200ms;
+  text-align: center;
+}
+.Accordion button {
+  width: 100%;
+}
+.Accordion button:hover {
+  cursor: pointer;
+}

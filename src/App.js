@@ -1,15 +1,24 @@
 import React from "react";
-import { TheDate, TheDateClass } from "./compositions/TheDate";
-import {CounterClass, CounterFunction} from './compositions/Counter'
+import Accordion from "./state-drills/Accordion"
+
+const sections = [
+  {
+    title: 'Section 1',
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+  },
+  {
+    title: 'Section 2',
+    content: 'Cupiditate tenetur aliquam necessitatibus id distinctio quas nihil ipsam nisi modi!',
+  },
+  {
+    title: 'Section 3',
+    content: 'Animi amet cumque sint cupiditate officia ab voluptatibus libero optio et?',
+  },
+]
 
 function App() {
   return (
-    <div>
-      <TheDate />
-      <TheDateClass />
-      <CounterClass />
-      <CounterFunction />
-    </div>
+      <Accordion sections={sections}/>
   );
 }
 

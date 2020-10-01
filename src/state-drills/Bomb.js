@@ -39,7 +39,6 @@ export default class Bomb extends React.Component {
 export function BombFunction() {
   const [count, setCount] = useState(0);
 
-
   // useEffect(() => {
   //   console.log("starting interval")
   //   const interval = setInterval(() => {
